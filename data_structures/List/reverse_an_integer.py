@@ -1,3 +1,5 @@
+# reverse an integer
+# leading zero and trailing zero post reversal are funky
 num = 54321
 
 #initalize return value variable
