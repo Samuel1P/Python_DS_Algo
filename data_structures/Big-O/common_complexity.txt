@@ -1,0 +1,22 @@
+# commonly used notation
+
+O(n) - For looping a list. n is the number of items in the list. Proportional.
+O(2n) can be written as O(n) -  We can drop the constants
+
+O(n²) - Nested For loop. Loop within a loop.
+O(n³) can be written as O(n²)
+
+O(n²+ n) - We can drop the non dominants and write it as O(n²)
+
+O(1) - Constant - Best performance
+O(3) Can be written as O(1)
+
+O(log n) - Divide and conquer. relates to performance we see in binary search on sorted list. A item in a million item long list can be found in ~30 operations.
+
+O(n log n) - Sorting algos (merge sort)
+
+
+
+https://www.bigocheatsheet.com/
+
+# ⁰, ¹, ², ³, ⁴. ⁵, ⁶, ⁷, ⁸, ⁹

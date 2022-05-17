@@ -1,0 +1,9 @@
+ θ - Theta is for average case.
+ Ω - Omega is for best case.
+ O - Omicron (Big O) is for worst case. 
+
+ sample = [1, 2, 3, 4, 5, 6, 7]
+
+ 1 is best case
+ 4 is average case
+ 7 is worst case.
