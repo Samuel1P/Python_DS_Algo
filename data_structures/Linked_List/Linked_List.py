@@ -1,5 +1,5 @@
 """
-Linked List implimentation
+Linked List implementation
 """
 from __future__ import annotations
 class Node:
@@ -60,19 +60,6 @@ class LinkedList:
         self.length += 1
         return True
     
-    
-    def prepend(self, new_value):
-        print("prepend called...")
-        new_node = Node(new_value)
-        if not self.length:
-            print("Empty linked list.")
-            self.head = new_node
-            self.tail = new_node
-        else:
-            new_node.next = self.head
-            self.head = new_node
-        self.length += 1
-        return True
     
     def pop(self):
         print("pop called..")
