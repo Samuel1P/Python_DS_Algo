@@ -183,4 +183,6 @@ print(DL.remove_node(0))
 print(DL.insert_node(0, "Aakash"))
 print(DL)
 # print(DL.pop())
-# print(DL)
+DL = DoublyLinkedList()
+
+print(DL)
