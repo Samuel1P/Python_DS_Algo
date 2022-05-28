@@ -1,0 +1,36 @@
+
+
+# Full Binary Tree - Node has two children or no children
+            4
+         /     \                  
+        2       6          
+               /  \                      
+              5    7  
+
+
+
+
+
+# Full and Perfect Binary Tree - symmetry 
+            4
+         /     \                  
+        2       6  
+
+
+
+
+# Complete Binary Tree - All are filled except potentiallu the last row and  Nodes are added from left to right.
+            4
+         /     \                  
+        2       6          
+      /                     
+     3         
+
+
+Space complexity:
+
+Formula: 2 ^ number of row - 1
+-1 can be discared since it is insignigicant.
+A Perfect Binary tree gives the best possible sceanrio (omega) is Omega(Log N).
+
+The worst possible sceanrio is Tree that never forks (like a LinkedList). The Big O is O(n). This is a very rare case sceanrio, so we do not treat Binary Tree as O(n). Rather we treat is as O(Log n).
