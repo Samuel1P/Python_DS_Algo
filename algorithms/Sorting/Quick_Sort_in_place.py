@@ -2,6 +2,7 @@
 Quick sort : In-place solution
 
 """
+from functools import partial
 
 sample_data =  [4,6,1,7,3,2,5]
 
@@ -26,6 +27,6 @@ def quick_sort(sample_list, left, right):
     return sample_list
 
 last_index = len(sample_data) - 1
-
-output_data = quick_sort(sample_data, 0 , last_index)
+_quick_sort = partial(quick_sort, left=0 , right=last_index)
+output_data = _quick_sort(sample_data)
 print("output: ", sample_data )
