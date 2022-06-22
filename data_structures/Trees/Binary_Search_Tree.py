@@ -3,6 +3,7 @@ Binary Search Tree implementation
 """
 
 from functools import total_ordering
+import queue
 
 @total_ordering
 class Node:
@@ -113,6 +114,20 @@ class BinarySearchTree:
             curr_node = curr_node.right
         return curr_node
 
+    def bfs(self):
+        queue = []
+        result = []
+        curr_node = self.root
+        queue.append(curr_node)
+        while len(queue) > 0:
+            curr_node = queue.pop(0)
+            result.append(curr_node.value)
+            if curr_node.left:
+                queue.append(curr_node.left)
+            if curr_node.right:
+                queue.append(curr_node.right)
+        return result
+    
     """
     # TO DO
     def delete_node(self, value):
@@ -124,17 +139,30 @@ class BinarySearchTree:
         # Need to learn Tree traversal to implement this
     """
     
-    
+"""
 bst1 = BinarySearchTree(5)
-print(bst1.root)
+# print(bst1.root)
 bst1.insert_node(2)
 bst1.insert_node(8)
 bst1.insert_node(7)
 bst1.insert_node(9)
-print(bst1.root.left, bst1.root, bst1.root.right)
-bst1.contains_value(0)
-print(bst1.get_node(2))
-print("- Min Value-")
-print(bst1.minimum_value(8))
-print("- Max Value-")
-print(bst1.maximum_value(8))
+bst1.insert_node(1)
+bst1.insert_node(3)
+# print(bst1.root.left, bst1.root, bst1.root.right)
+# bst1.contains_value(0)
+# print(bst1.get_node(2))
+# print("- Min Value-")
+# print(bst1.minimum_value(8))
+# print("- Max Value-")
+# print(bst1.maximum_value(8))
+
+            5   
+    2               8
+1       3       7       9
+
+resultant = [5, 2, 8,1,3,7,9]
+
+out = bfs(bst1)
+print(out)
+
+"""
