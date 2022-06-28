@@ -128,6 +128,17 @@ class BinarySearchTree:
                 queue.append(curr_node.right)
         return result
     
+    def dfs_preorder(self):
+        result = []
+        curr_node = self.root
+        def traverse(node: Node):
+            result.append(node.value)
+            if node.left:
+                traverse(node.left)
+            if node.right:
+                traverse(node.right)
+        traverse(curr_node) 
+        return result
     """
     # TO DO
     def delete_node(self, value):

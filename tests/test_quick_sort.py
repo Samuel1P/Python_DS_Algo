@@ -9,6 +9,7 @@ from algorithms.Sorting.Quick_Sort_in_place import quick_sort
 class TestQuickSort:
     """
     Test Class
+
     """
 
     def test_sort_list_one(self):
