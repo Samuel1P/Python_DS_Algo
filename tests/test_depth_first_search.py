@@ -6,7 +6,7 @@ import random
 from data_structures.Trees.Binary_Search_Tree import BinarySearchTree
 
 
-class TestBFS:
+class TestDFS:
     """
     Test Class
     """
@@ -24,4 +24,9 @@ class TestBFS:
 
         actual = self.bst1.dfs_preorder()
         expected = [5, 2, 1, 3, 8, 7, 9]
+        assert actual == expected
+        
+    def test_dfc_post_order(self):
+        actual = self.bst1.dfs_post_order()
+        expected = [1, 3, 2, 7, 9, 8, 5]
         assert actual == expected

@@ -139,6 +139,19 @@ class BinarySearchTree:
                 traverse(node.right)
         traverse(curr_node) 
         return result
+    
+    def dfs_post_order(self):
+        result = []
+        curr_node = self.root
+        def traverse(node: Node):
+            if node.left:
+                traverse(node.left)
+            if node.right:
+                traverse(node.right)
+            result.append(node.value)
+        traverse(curr_node)
+        return result
+        
     """
     # TO DO
     def delete_node(self, value):
