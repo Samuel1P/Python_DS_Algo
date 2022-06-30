@@ -26,7 +26,12 @@ class TestDFS:
         expected = [5, 2, 1, 3, 8, 7, 9]
         assert actual == expected
         
-    def test_dfc_post_order(self):
+    def test_dfs_post_order(self):
         actual = self.bst1.dfs_post_order()
         expected = [1, 3, 2, 7, 9, 8, 5]
+        assert actual == expected
+
+    def test_dfs_in_order(self):
+        actual = self.bst1.dfs_in_order()
+        expected = [1, 2, 3, 5, 7, 8, 9]
         assert actual == expected

@@ -151,6 +151,18 @@ class BinarySearchTree:
             result.append(node.value)
         traverse(curr_node)
         return result
+    
+    def dfs_in_order(self):
+        result = []
+        curr_node = self.root
+        def traverse(node: Node):
+            if node.left:
+                traverse(node.left)
+            result.append(node.value)
+            if node.right:
+                traverse(node.right)
+        traverse(curr_node)
+        return result
         
     """
     # TO DO
