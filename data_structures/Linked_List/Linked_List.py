@@ -158,6 +158,23 @@ class LinkedList:
             before = temp
             temp = after
             
+    def traversed_data_list(self: LinkedList):
+        data_list = []
+        temp = self.head
+        while(temp):
+            data_list.append(temp.value)
+            temp = temp.next
+        return data_list
+    
+    @staticmethod
+    def traversed_data_list_from_head(head: Node):
+        data_list_from_head = []
+        temp = head
+        while(temp):
+            data_list_from_head.append(temp.value)
+            temp = temp.next
+        return data_list_from_head
+            
     def print_all(self):
         print(f"Print all called : {len(self)}")
         temp_node = self.head
@@ -165,28 +182,30 @@ class LinkedList:
             print(f"Node : {temp_node.value}")
             temp_node = temp_node.next
     
+    
+    
     def __len__(self):
         return self.length
     
-LL1 = LinkedList("Ash")
-# LL1 = LinkedList()
-LL2 = LinkedList()
+# LL1 = LinkedList("Ash")
+# # LL1 = LinkedList()
+# LL2 = LinkedList()
 
-# LL2.print_all()
+# # LL2.print_all()
 
-# LL1.prepend("Bob")
-LL1.append("Bob")
-LL1.append("Charlie")
-# LL1.remove_node(2)
-LL1.print_all()
-LL1.reverse()
+# # LL1.prepend("Bob")
+# LL1.append("Bob")
+# LL1.append("Charlie")
+# # LL1.remove_node(2)
 # LL1.print_all()
-# LL1.remove_node(0)
-LL1.print_all()
-LL1.reverse()
+# LL1.reverse()
+# # LL1.print_all()
+# # LL1.remove_node(0)
 # LL1.print_all()
-# LL1.remove_node(0)
-LL1.print_all()
+# LL1.reverse()
+# # LL1.print_all()
+# # LL1.remove_node(0)
+# LL1.print_all()
 # exit()
 # LL1.print_all()
 

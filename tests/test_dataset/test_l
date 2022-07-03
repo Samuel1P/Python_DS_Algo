@@ -1,0 +1,11 @@
+{
+    "test_linked_list": {
+        "test_case_name": "test_linked_list_creation",
+        "priority": "P1",
+        "metadata": {} ,
+        "test_data_set": { 
+            "input_list" : [""],
+            "expected_result": ""
+        }
+    }
+}
