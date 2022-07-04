@@ -6,7 +6,7 @@ class Node:
     """
     Node Class
     """
-    def __init__(self, value):
+    def __init__(self, value=None):
         """
         Constructor for Node
         """
@@ -27,7 +27,7 @@ class LinkedList:
         """
         constructor for linked list
         """
-        if value:
+        if value is not None:
             node = Node(value)
             self.head = node
             self.tail = node
