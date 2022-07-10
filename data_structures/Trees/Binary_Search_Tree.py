@@ -3,27 +3,26 @@ Binary Search Tree implementation
 """
 
 from functools import total_ordering
-import queue
 
 @total_ordering
 class Node:
     def __init__(self, value):
-        self.value = value
+        self.val = value
         self.left = None
         self.right = None
         
     def __str__(self):
-        return f"Node('{self.value}')"
+        return f"Node('{self.val}')"
     
     def __eq__(self, other_node):
         if not isinstance(other_node, Node):
             return NotImplemented
-        return self.value == other_node.value
+        return self.val == other_node.val
     
     def __gt__(self, other_node):
         if not isinstance(other_node, Node):
             return NotImplemented
-        return self.value > other_node.value
+        return self.val > other_node.val
         
 class BinarySearchTree:
     def __init__(self, value=None):
@@ -96,7 +95,7 @@ class BinarySearchTree:
 
     def minimum_value(self, value=None):
         if value is None:
-            value = self.root.value
+            value = self.root.val
         if not self.contains_value(value):
             return False
         curr_node = self.get_node(value)
@@ -106,7 +105,7 @@ class BinarySearchTree:
     
     def maximum_value(self, value=None):
         if value is None:
-            value = self.root.value
+            value = self.root.val
         if not self.contains_value(value):
             return False
         curr_node = self.get_node(value)
@@ -121,7 +120,21 @@ class BinarySearchTree:
         queue.append(curr_node)
         while len(queue) > 0:
             curr_node = queue.pop(0)
-            result.append(curr_node.value)
+            result.append(curr_node.val)
+            if curr_node.left:
+                queue.append(curr_node.left)
+            if curr_node.right:
+                queue.append(curr_node.right)
+        return result
+    
+    @staticmethod
+    def bfs_from_node(curr_node: Node):
+        queue = []
+        result = []
+        queue.append(curr_node)
+        while len(queue) > 0:
+            curr_node = queue.pop(0)
+            result.append(curr_node.val)
             if curr_node.left:
                 queue.append(curr_node.left)
             if curr_node.right:
@@ -132,7 +145,7 @@ class BinarySearchTree:
         result = []
         curr_node = self.root
         def traverse(node: Node):
-            result.append(node.value)
+            result.append(node.val)
             if node.left:
                 traverse(node.left)
             if node.right:
@@ -148,7 +161,7 @@ class BinarySearchTree:
                 traverse(node.left)
             if node.right:
                 traverse(node.right)
-            result.append(node.value)
+            result.append(node.val)
         traverse(curr_node)
         return result
     
@@ -158,7 +171,7 @@ class BinarySearchTree:
         def traverse(node: Node):
             if node.left:
                 traverse(node.left)
-            result.append(node.value)
+            result.append(node.val)
             if node.right:
                 traverse(node.right)
         traverse(curr_node)
