@@ -6,18 +6,18 @@ class Node:
     """
     Node Class
     """
-    def __init__(self, value=None):
+    def __init__(self, value=None, next=None):
         """
         Constructor for Node
         """
-        self.value = value
-        self.next = None
+        self.val = value
+        self.next = next
     
     def __repr__(self):
         """
         str represention of the node
         """
-        return f"Node('{self.value}') --points-to--> {self.next}"
+        return f"Node('{self.val}') --points-to--> {self.next}"
         
 class LinkedList:
     """
@@ -111,7 +111,7 @@ class LinkedList:
         print(f"set value {value} at index {index}...")
         temp = self.get_node(index)
         if temp:
-            temp.value = value
+            temp.val = value
             return True
         return False
     
@@ -122,9 +122,9 @@ class LinkedList:
             print(f"Index {index} unavailable. Available index range till {len(self)}.")
             return False
         if index == 0:
-            return self.prepend(new_node.value)
+            return self.prepend(new_node.val)
         if index == len(self):
-            return self.append(new_node.value)
+            return self.append(new_node.val)
         temp_node = self.get_node(index-1)
         new_node.next = temp_node.next 
         temp_node.next = new_node
@@ -162,7 +162,7 @@ class LinkedList:
         data_list = []
         temp = self.head
         while(temp):
-            data_list.append(temp.value)
+            data_list.append(temp.val)
             temp = temp.next
         return data_list
     
@@ -171,7 +171,7 @@ class LinkedList:
         data_list_from_head = []
         temp = head
         while(temp):
-            data_list_from_head.append(temp.value)
+            data_list_from_head.append(temp.val)
             temp = temp.next
         return data_list_from_head
             
@@ -179,7 +179,7 @@ class LinkedList:
         print(f"Print all called : {len(self)}")
         temp_node = self.head
         while temp_node: 
-            print(f"Node : {temp_node.value}")
+            print(f"Node : {temp_node.val}")
             temp_node = temp_node.next
     
     

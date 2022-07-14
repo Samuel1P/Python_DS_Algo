@@ -8,7 +8,7 @@ from problems.linkedlist.remove_duplicates_from_sorted_list import Solution
 from data_structures.Linked_List.Linked_List import LinkedList
 
 
-class TestTwoSum:
+class TestRemoveDuplicatesLinkList:
     """
     Test Class
     """

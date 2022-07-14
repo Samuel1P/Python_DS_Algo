@@ -12,13 +12,14 @@ Time: Big O (n)
 Space: O(1)
 
 """
+from data_structures.Linked_List.Linked_List import Node
 
 
 class Solution:
-    def deleteDuplicates(self, head):
+    def deleteDuplicates(self, head: Node):
         curr_node = head
         while curr_node:
-            while curr_node.next and curr_node.value == curr_node.next.value:
+            while curr_node.next and curr_node.val == curr_node.next.val:
                 curr_node.next = curr_node.next.next
             curr_node = curr_node.next
         return head

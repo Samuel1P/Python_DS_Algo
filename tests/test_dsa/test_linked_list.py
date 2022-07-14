@@ -15,27 +15,27 @@ class TestLinkedList:
         
     def test_append_node(self):
         self.LL.append("Evan")
-        assert self.LL.get_node(len(self.LL)-1).value == "Evan"
+        assert self.LL.get_node(len(self.LL)-1).val == "Evan"
         self.LL_EMPTY.append("Abdul")
-        assert self.LL_EMPTY.get_node(0).value == "Abdul"
+        assert self.LL_EMPTY.get_node(0).val == "Abdul"
 
     def test_prepend_node(self):
-        assert self.LL.get_node(0).value == "Ash"
+        assert self.LL.get_node(0).val == "Ash"
         self.LL.prepend("Abdul")
-        assert self.LL.get_node(0).value == "Abdul"
+        assert self.LL.get_node(0).val == "Abdul"
         
     def test_pop_last_node(self):
         length_before_pop = len(self.LL)
         popped_node = self.LL.pop()
         length_after_pop = len(self.LL)
-        assert popped_node.value == "Dom"
+        assert popped_node.val == "Dom"
         assert length_before_pop == length_after_pop + 1
 
     def test_pop_first_node(self):
         length_before_pop = len(self.LL)
         popped_node = self.LL.pop_first()
         length_after_pop = len(self.LL)
-        assert popped_node.value == "Ash"
+        assert popped_node.val == "Ash"
         assert length_before_pop == length_after_pop + 1
     
     def test_get_node_at_index(self):
