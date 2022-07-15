@@ -10,7 +10,7 @@ Notes:
 5. The root node remains the same. Return it at the end.
 """
 
-from data_structures.Trees.Binary_Search_Tree import BinarySearchTree, Node
+from data_structures.Trees.Binary_Search_Tree import Node
 
 class Solution:
     def invertTree(self, curr_node: Node) -> Node:

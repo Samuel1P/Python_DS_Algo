@@ -5,7 +5,7 @@ from __future__ import annotations
 from functools import total_ordering
 
 @total_ordering
-class BinaryTreeNode:
+class TreeNode:
     def __init__(self, value):
         self.val = value
         self.left = None
@@ -15,12 +15,12 @@ class BinaryTreeNode:
         return f"Node('{self.val}')"
     
     def __eq__(self, other_node):
-        if not isinstance(other_node, BinaryTreeNode):
+        if not isinstance(other_node, TreeNode):
             return NotImplemented
         return self.val == other_node.val
     
     def __gt__(self, other_node):
-        if not isinstance(other_node, BinaryTreeNode):
+        if not isinstance(other_node, TreeNode):
             return NotImplemented
         return self.val > other_node.val
     
