@@ -1,4 +1,3 @@
-
 """
 Test Suite for the maximum-subarray
 """
