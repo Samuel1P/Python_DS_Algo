@@ -1,6 +1,6 @@
 """
 Stack impementation using Linked List
-FIFO
+LIFO
 """
 
 class Node:
@@ -22,17 +22,22 @@ class Stack:
         else:
             self.top = None
             self.height = 0
-
     def __str__(self) -> str:
         output = ""
-        output += "*"*50
+        #output += "*"*5
         node = self.top
+        while node is None:
+            return "Empty Stack"
         while node is not None:
             output += f"\nNode: {node}\n"
             node = node.next
-        output += "\n"+"*"*50
+        #output += "\n"+"*"*5
         return output
-        
+    
+    def __len__(self):
+        return self.height
+    
+    
     def push(self, value):
         new_node = Node(value)
         if self.height == 0:
@@ -57,8 +62,7 @@ class Stack:
         
 
             
-
-        
+"""
 stack = Stack()
 print(stack)
 stack.push("Anton")
@@ -70,3 +74,4 @@ print(stack.pop())
 print(stack.pop())
 print(stack.pop())
 print(stack)
+"""
