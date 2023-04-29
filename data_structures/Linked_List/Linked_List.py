@@ -18,7 +18,27 @@ class Node:
         str represention of the node
         """
         return f"Node('{self.val}') --points-to--> {self.next}"
-        
+    
+    def __len__(self):
+        """
+        number of nodes to the right from curr node
+        """
+        length = 1
+        curr = self
+        # this will cause bug in circular linked list
+        while curr.next: 
+            length+=1
+            curr = curr.next
+        return length
+    
+    def __bool__(self):
+        """
+        Check if node is exisiting
+        """
+        if isinstance(self, Node):
+            return True
+        return False
+
 class LinkedList:
     """
     Linked List Class
@@ -38,7 +58,7 @@ class LinkedList:
             self.length = 0
     
     def append(self, new_value):
-        print("append called..")
+        # print("append called..")
         node = Node(new_value)
         if not self.length:
             self.head = node
@@ -48,7 +68,7 @@ class LinkedList:
         self.length += 1
     
     def prepend(self, new_value):
-        print("prepend called...")
+        # print("prepend called...")
         new_node = Node(new_value)
         if not self.length:
             print("Empty linked list.")
@@ -62,7 +82,7 @@ class LinkedList:
     
     
     def pop(self):
-        print("pop called..")
+        # print("pop called..")
         if not self.length:
             print("Empty linked list. Cannout Pop")
             return None

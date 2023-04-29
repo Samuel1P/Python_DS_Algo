@@ -169,6 +169,7 @@ class DoublyLinkedList:
             node = node.next
         return output+"\n"+"-"*50
 
+"""
 DL = DoublyLinkedList("Abi")
 DL.prepend("Bob")
 DL.prepend("Cathy")
@@ -186,3 +187,4 @@ print(DL)
 DL = DoublyLinkedList()
 
 print(DL)
+"""
