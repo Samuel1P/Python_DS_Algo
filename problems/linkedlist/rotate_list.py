@@ -1,17 +1,18 @@
-# https://leetcode.com/problems/rotate-list/
 """
-Notes: (rerite this)
+# https://leetcode.com/problems/rotate-list/
+Notes: 
+Let's take an example..
+length is = 5 , inp = 1,2,3,4,5, k=3
+expected out = 3,4,5,1,2
 
-Node('1') --points-to--> Node('2') --points-to--> Node('3') --points-to--> Node('4') --points-to--> Node('5') --points-to--> None
-lenght is = 5
-inp = 1,2,3,4,5
-k=3
-pick the 4th item. that's new_head
-pick 3rd item and point to null
-pick curr tail and connect to old head
-make 3rd item the new_tail
+step 1: pick the 4th item. that's your new new_head node (4).
+step 2: pick 3rd item (3) and point to null. that's the new last node.
+step 3: pick original tail (5) and point to old head (1)
 
-ans = 3,4,5,1,2
+1. if node is empty, return it
+2. if node is alone, return it
+3. take modulo of k with length of linked list to help with step 1 range calc and being efficient.
+4. length_of_ll - k will move us to the 5 the item, since we are are at node(1) even before for loop starts. so we do -1.
 """
 from typing import Optional
 from data_structures.Linked_List.Linked_List import Node, LinkedList
