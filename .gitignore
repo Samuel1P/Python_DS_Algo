@@ -6,9 +6,9 @@
 **/__pycache__
 
 # vs code ws
-/vscode
-*.code-workspace
-.vscode
+# /vscode
+# *.code-workspace
+# .vscode
 
 # db files
 db_dir/
