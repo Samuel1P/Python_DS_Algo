@@ -12,25 +12,25 @@ apart from edge cases, main logic is this..
 
 from data_structures.Stack.Stack_implementation_using_LinkedList import Stack
 
-stack = Stack()
 
 class Solution:
     def isValid(self, input_str: str) -> bool:
-        close_map = {")": "(", "}": "{", "]": "["}
+        stack = Stack()
+        close_map = {")": "(",
+                     "}": "{",
+                     "]": "["}
         if not input_str.strip():
             return True
         for item in input_str:
             if item in close_map.values():
+                # if opener
                 stack.push(item)
-            else:
-                top_v = stack.top.value
-                if  top_v == close_map[item]:
-                    stack.pop()
-                else:
+            elif item in close_map:
+                # if closer
+                if not stack.top or stack.top.value != close_map[item]:
                     return False
-        if len(stack) == 1:
-            return False
-        return True
+                stack.pop() # pop the opener
+        return True if stack.top is None else False
 
 
 class _Solution:
