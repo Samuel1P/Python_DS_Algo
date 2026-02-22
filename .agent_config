@@ -1,0 +1,8 @@
+# Agent Configuration
+# Please read AGENT_INSTRUCTIONS.md before working on this project
+
+INSTRUCTIONS_FILE=AGENT_INSTRUCTIONS.md
+PROJECT_TYPE=learning
+LANGUAGE=python
+FOCUS=data_structures_algorithms
+MD_Files_location=/md_files

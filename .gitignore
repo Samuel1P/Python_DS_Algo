@@ -9,6 +9,7 @@
 # /vscode
 # *.code-workspace
 # .vscode
+logs/*
 
 # db files
 db_dir/

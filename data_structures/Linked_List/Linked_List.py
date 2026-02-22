@@ -82,21 +82,21 @@ class LinkedList:
     
     
     def pop(self):
-        # print("pop called..")
-        if not self.length:
-            print("Empty linked list. Cannout Pop")
+        if self.length == 0:
             return None
+        if self.length == 1:
+            temp = self.head
+            self.head, self.tail = None, None
+            self.length = 0
+            return temp            
         temp_node = self.head
-        pre = self.head
+        prev_node = None
         while temp_node.next:
-            pre = temp_node
+            prev_node = temp_node
             temp_node = temp_node.next
-        self.tail = pre
+        self.tail = prev_node
         self.tail.next = None
         self.length -= 1
-        if not self.length:
-            self.head = None
-            self.tail = None
         return temp_node
     
     def pop_first(self):
