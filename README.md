@@ -1,60 +1,25 @@
-# Python DS & Algo Learning
+# Python DS & Algo
 
-Personal learning repository for mastering Data Structures and algorithms.
+Personal repo for learning Data Structures and Algorithms in Python.
 
-## Quick Stats
-- **Data Structures**: 16 implementations
-- **Algorithms**: 10 implementations  
-- **Problems Solved**: 23
-- **Test Coverage**: 29 test cases
-
-## Structure
+## Repo layout
 
 ```
-data_structures/    → Linked lists, Trees, Stack, Queue, Graph, Hash tables
-algorithms/         → Sorting, Recursion, Tree traversal
-problems/           → String, Array, LinkedList, Tree, HashMap, Stack, Bit ops solutions
-tests/              → Comprehensive test suite
+data_structures/   Linked lists, Trees, Stack, Queue, Graph, Hash tables
+algorithms/        Sorting, Recursion, Tree traversal
+problems/          LeetCode-style solutions by category
+tests/             pytest test suite
+md_files/          Agent guide and docs
 ```
-
-## Topics Covered
-
-### Data Structures
-- Linked List (Singly, Doubly)
-- Binary Trees & BST
-- Stacks & Queues
-- Graphs & Hash Tables
-
-### Algorithms
-- **Sorting**: Bubble, Selection, Insertion, Merge, Quick
-- **Recursion**: Factorial, recursive problems
-- **Traversal**: BFS, DFS
-
-### Problems by Category
-- **Strings**: palindrome, substring, encoding, roman numerals
-- **Arrays**: two sum, three sum, max subarray, stock trading
- - **LinkedLists**: middle of linked list, remove elements, reverse, rotate, detect cycle
-- **Trees**: invert, merge trees
-- **HashMaps**: anagrams, top K frequent
-- **Stack**: valid parentheses
-- **Bit Ops**: reverse bits
 
 ## Testing
 
 ```bash
-pytest                          # Run all tests
-pytest -v                       # Verbose output
-pytest tests/test_dsa/         # Test data structures
-pytest tests/test_problems/    # Test problems
+pytest                         # all tests
+pytest -v                      # verbose
+pytest tests/test_dsa/         # data structure tests
+pytest tests/test_problems/    # problem tests
 ```
-
-## Quick Reference: Time Complexities
-
-| Sorting | Best | Average | Worst | Space |
-|---------|------|---------|-------|-------|
-| Bubble | O(n) | O(n²) | O(n²) | O(1) |
-| Merge | O(n log n) | O(n log n) | O(n log n) | O(n) |
-| Quick | O(n log n) | O(n log n) | O(n²) | O(log n) |
 
 ## Setup
 

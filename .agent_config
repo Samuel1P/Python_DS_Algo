@@ -1,5 +1,5 @@
 # Agent Configuration
-# Please read AGENT_INSTRUCTIONS.md before working on this project
+# Please read md_files/AGENT_GUIDE.md before working on this project
 
 INSTRUCTIONS_FILE=AGENT_GUIDE.md
 PROJECT_TYPE=learning

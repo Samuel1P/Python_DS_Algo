@@ -5,6 +5,10 @@
 *.pyc 
 **/__pycache__
 
+# pytest
+.pytest_cache/
+**/.pytest_cache/
+
 # vs code ws
 # /vscode
 # *.code-workspace
