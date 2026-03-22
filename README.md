@@ -33,7 +33,7 @@ tests/              → Comprehensive test suite
 ### Problems by Category
 - **Strings**: palindrome, substring, encoding, roman numerals
 - **Arrays**: two sum, three sum, max subarray, stock trading
-- **LinkedLists**: reverse, remove elements, merge, rotate
+ - **LinkedLists**: middle of linked list, remove elements, reverse, rotate, detect cycle
 - **Trees**: invert, merge trees
 - **HashMaps**: anagrams, top K frequent
 - **Stack**: valid parentheses
