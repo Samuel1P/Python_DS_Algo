@@ -5,6 +5,21 @@
 		}
 	],
 	"settings": {
+		"editor.inlineSuggest.enabled": false,
+		// Disable Cursor's AI-powered completions
+		"cursor.completions.enabled": false,		
+		"editor.quickSuggestions": {
+			"comments": "off",
+			"strings": "off",
+			"other": "off"
+		},
+		"editor.suggestOnTriggerCharacters": false,
+		"editor.suggest.showWords": false,
+		"editor.acceptSuggestionOnCommitCharacter": false,
+		"github.copilot.enable": {
+			"*": false
+		},
+		"github.copilot.inlineSuggest.enable": false,
 		"workbench.colorCustomizations": {
 			"activityBar.activeBackground": "#600215",
 			"activityBar.activeBorder": "#1b7d03",

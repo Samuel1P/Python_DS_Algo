@@ -3,10 +3,10 @@
     "editor.quickSuggestions": {
         "comments": "off",
         "strings": "off",
-        "other": "off"
+        "other": "on"
     },
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.suggest.showWords": false,
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.suggest.showWords": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "github.copilot.enable": {
         "*": false
@@ -46,5 +46,6 @@
             "envManager": "ms-python.python:pyenv",
             "packageManager": "ms-python.python:pip"
         }
-    ]
+    ],
+    "cursorpyright.analysis.autoImportCompletions": false
 }
