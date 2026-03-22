@@ -1,6 +1,6 @@
-# Python DS & Algo Learning
+# Python DS & Algo Learning 📚
 
-Personal learning repository for mastering Data Structures and algorithms.
+Personal learning repository for mastering Data Structures and Algorithms.
 
 ## Quick Stats
 - **Data Structures**: 16 implementations

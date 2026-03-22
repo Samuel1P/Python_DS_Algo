@@ -1,7 +1,7 @@
 # Agent Configuration
 # Please read AGENT_INSTRUCTIONS.md before working on this project
 
-INSTRUCTIONS_FILE=AGENT_INSTRUCTIONS.md
+INSTRUCTIONS_FILE=AGENT_GUIDE.md
 PROJECT_TYPE=learning
 LANGUAGE=python
 FOCUS=data_structures_algorithms

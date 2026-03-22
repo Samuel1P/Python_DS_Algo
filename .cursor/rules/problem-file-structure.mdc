@@ -1,0 +1,61 @@
+---
+description: File structure and conventions for all files in problems/
+globs: problems/**/*.py
+alwaysApply: false
+---
+
+# Problem File Structure
+
+Every file in `problems/` must follow this exact structure:
+
+```python
+# https://leetcode.com/problems/<problem-slug>/
+"""
+Approach notes placeholder:
+1. (fill in step-by-step after implementation)
+Time: O(?)
+Space: O(?)
+"""
+from typing import List  # import only what is needed
+
+class Solution:
+    def methodName(self, param: type) -> type:
+        pass  # user writes implementation
+```
+
+## Rules
+
+- LeetCode URL on line 1 as a `#` comment
+- Include a **placeholder module docstring**; approach notes are filled by the user
+- Time/Space complexity in the module docstring — not as inline comments
+- Exactly one `Solution` class per file
+- Method name matches LeetCode exactly (camelCase: `twoSum`, `maxSubArray`)
+- No `if __name__ == "__main__"` block
+- No docstring inside the method body — the module docstring covers it
+
+## Linked list problems — import pattern
+
+```python
+from typing import Optional
+from data_structures.Linked_List.Linked_List import Node
+
+# Definition for singly-linked list.
+# class Node:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+class Solution:
+    def someMethod(self, head: Optional[Node]) -> Optional[Node]:
+        pass
+```
+
+## Tree problems — import pattern
+
+```python
+from data_structures.Trees.Binary_Search_Tree import Node
+
+class Solution:
+    def someMethod(self, root: Node) -> Node:
+        pass
+```

@@ -1,0 +1,69 @@
+---
+description: File structure and conventions for all test files in tests/
+globs: tests/**/*.py
+alwaysApply: false
+---
+
+# Test File Structure
+
+Every test file must follow this structure:
+
+```python
+"""
+Test Suite for <problem name>
+"""
+from problems.<category>.<filename> import Solution
+
+
+class Test<ProblemName>:
+    """
+    Test Class
+    """
+    def test_one(self):
+        expected = <value>
+        actual = Solution().methodName(<input>)
+        assert actual == expected
+
+    def test_two(self):
+        ...
+```
+
+## Rules
+
+- Import path mirrors `problems/` folder: `from problems.<subfolder>.<filename> import Solution`
+- Class name: `Test` + PascalCase problem name (e.g. `TestValidPalindrome`)
+- Test methods named `test_one`, `test_two`, `test_three` — not `test_case_1`
+- Use `actual` / `expected` variable names for clarity
+- No `@pytest.fixture` — use `setup_class` for shared state instead
+- Minimum 3 test cases per problem, at least one edge case
+
+## Linked list / tree tests — shared setup pattern
+
+```python
+from problems.linkedlist.reverse_linked_list import Solution
+from data_structures.Linked_List.Linked_List import LinkedList
+
+class TestReverseLinkedList:
+    def setup_class(self):
+        self.LL = LinkedList(1)
+        self.LL.append(2)
+        self.LL.append(3)
+
+    def test_one(self):
+        expected = [3, 2, 1]
+        result_head = Solution().reverseList(self.LL.head)
+        actual = self.LL.traversed_data_list_from_head(result_head)
+        assert actual == expected
+```
+
+## Test file location mirrors problems/ structure
+
+| Problem location | Test location |
+|-----------------|--------------|
+| `problems/strings/` | `tests/test_problems/test_strings/` |
+| `problems/list/` | `tests/test_problems/test_lists/` |
+| `problems/linkedlist/` | `tests/test_problems/test_linkedlist/` |
+| `problems/trees/` | `tests/test_problems/test_trees/` |
+| `problems/hashmaps/` | `tests/test_problems/test_hashmaps/` |
+| `problems/stack/` | `tests/test_problems/test_stack/` |
+| `problems/bit_operations/` | `tests/test_problems/test_bit_operations/` |

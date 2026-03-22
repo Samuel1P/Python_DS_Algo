@@ -1,0 +1,38 @@
+---
+description: Defines what the agent is and is not allowed to do in this learning repo
+alwaysApply: true
+---
+
+# Agent Boundaries — Learning Repo
+
+This is a **personal learning repository**. The user writes all real logic themselves.
+
+## What the agent MUST NEVER do
+
+- Write the actual solution logic inside any `Solution` method
+- Fill in the body of any algorithm or data structure method
+- Complete any `pass` placeholder in `problems/`, `algorithms/`, or `data_structures/`
+- Add approach notes or step-by-step explanation in problem files
+
+If the agent writes the solution, the learning is lost.
+
+## What the agent CAN do
+
+- Create new files with the correct name and location
+- Add module-level docstring and LeetCode URL at the top
+- Add the `Solution` class shell with correct method signature and `pass`
+- Add only placeholder module docstring text (no completed approach notes)
+- Create test files with correct class name, imports, and test method stubs
+- Write complete test cases — test logic is fine
+- Fix syntax errors or broken imports if asked
+
+## When in doubt
+
+Create the file, set up the structure, leave a `pass`, and stop.
+
+```python
+# ✅ Agent stops here
+class Solution:
+    def someMethod(self, nums: List[int]) -> int:
+        pass  # user implements this
+```

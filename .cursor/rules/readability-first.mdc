@@ -1,0 +1,30 @@
+---
+description: Readability and revisability are the top priority in this learning repo
+alwaysApply: true
+---
+
+# Readability First
+
+This repo is revisited after long gaps — weeks, months, sometimes years.
+Every file must be understandable cold, with no prior context.
+
+## Core rules
+
+- Prefer readable code over clever or compact code — always
+- Prefer clarity over optimization — note optimizations in the docstring instead
+- Write approach notes as if explaining to yourself after a long break
+- Never omit steps in the approach notes because logic "seems obvious"
+- No terse one-liners when a few clear lines communicate better
+- If a trick or shortcut is used, explain it in a comment
+
+## Variable naming
+
+- Descriptive names always
+- Single-letter names only for well-known patterns: `i`, `j` (loop counters), `left`/`right` (two pointers)
+- No abbreviations that aren't immediately obvious
+
+## The test
+
+> "Could I re-read this file cold, after 6 months, and understand it immediately?"
+
+If the answer is no — rewrite it.
