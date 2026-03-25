@@ -2,11 +2,14 @@
 """
 linked-list-cycle
 
-Approach notes are user-authored.
-Fill step-by-step explanation after you implement.
+Notes:
+1. Take two pointers. Both start at the head and traverses towards the tail.
+2. One travels one node at a time and other one moves two node at a time.
+3. the logic to know here is, the fast will max lapp the slow once. At some point before the slow ptr, laps its cycle loop , fast will catch slow.
+4. Keep comparing nodes during every iteration. the exit condition is if fast pointer reaches None or fast pointer reaches past none or when slow ptr is same as fast ptr.
 
-Time: O(?)
-Space: O(?)
+Time: O(n)
+Space: O(1)
 """
 from typing import Optional
 from data_structures.Linked_List.Linked_List import Node

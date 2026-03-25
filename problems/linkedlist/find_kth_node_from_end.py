@@ -2,11 +2,13 @@
 """
 find-kth-node-from-end
 
-Approach notes are user-authored.
-Fill step-by-step explanation after you implement.
+Notes:
+1. It's a very clever soln. We create two pointers. move one (fast) pointer to k distance in the LL. Kind of offet. (if LL is not lengthy enough for the offset, we exit)
+2. Now start moving both pointers one by one until the fast pointers becomes none.
+3. slow pointer would be at the node which is k distance (the offset we set earlier)
 
-Time: O(?)
-Space: O(?)
+Time: O(n)
+Space: O(1)
 """
 from typing import Optional
 from data_structures.Linked_List.Linked_List import LinkedList, Node
