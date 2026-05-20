@@ -24,7 +24,7 @@ class Solution1:
         while curr:
             if curr.val not in unique_items:
                 unique_items.add(curr.val)
-                prev=curr
+                prev = curr
                 curr = curr.next
             else:
                 prev.next = curr.next
